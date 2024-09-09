@@ -194,7 +194,15 @@ if visualization == "Main Dashboard":
         st.write('\n\n')  # Adds two empty lines
         st.write('\n\n')  # Adds two empty lines
 
-        with st.expander('About the Data', expanded=True):
+
+        with st.expander('About the Developer', expanded=True):
+            st.write('''
+            - This Dashboard was developed by Abdullah Garatli''')
+
+        st.write('\n\n')  # Adds two empty lines
+        st.write('\n\n')  # Adds two empty lines       
+
+        with st.expander('About the Data', expanded=False):
             st.write('''
             - Data: [Beauty Startup Supply Chain Dataset](https://www.kaggle.com/datasets/amirmotefaker/supply-chain-dataset/data).
             - This dataset contains information about the supply chain of a beauty startup. It includes data about the products, suppliers, and customers.
@@ -618,8 +626,8 @@ elif visualization == "Shipping Analytics":
     #Defect Rate by Shipping Carrier
     defect_by_carrier = df.groupby('Shipping carriers')['Defect rates'].mean().reset_index()
 
-    # Sort suppliers by defect rate for better visualization
-    defect_by_supplier = defect_by_carrier.sort_values('Defect rates', ascending=False)
+    # Sort carriers by defect rate for better visualization
+    defect_by_carrier = defect_by_carrier.sort_values('Defect rates', ascending=False)
 
     # Create a horizontal bar chart
     fig = px.bar(defect_by_carrier, 
