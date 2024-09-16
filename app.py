@@ -29,7 +29,7 @@ with st.sidebar:
     st.title('💄 Visualization Options')
     st.write('\n\n')  # Adds two empty lines
     st.write('\n\n')  # Adds two empty lines
-    visualization = st.sidebar.selectbox("Choose a Visualization", ["Main Dashboard", "Product Type Analytics", "ABC Analysis", "Supplier Analytics", 
+    visualization = st.sidebar.selectbox("Choose a Visualization", ["Main Dashboard","ABC Analysis", "Product Type Analytics", "Supplier Analytics", 
                                                                "Shipping Analytics",])
 
 
